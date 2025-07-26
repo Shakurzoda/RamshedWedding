@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 150px;
+}
+
+.header__logo img {
+  width: 380px;
+  height: 360px;
+}
+
+.header__logo-text {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: normal;
+  color: rgb(85, 77, 68);
+  margin-bottom: 50px;
+}
+
+.inviteBaner {
+  display: flex;
+  margin: 100px 0;
+}
+
+.inviteBaner img {
+  width: 280px;
+  height: 50px;
+}
+
+.btnTop {
+  border-bottom: 1px solid black;
+  width: 150px;
+}
+
+.btnBtm {
+  border-top: 1px solid black;
+  width: 150px;
+}
