@@ -7,7 +7,7 @@ import cakeIMG from "/src/assets/Layer_6.png.webp"
 import patyIMG from '/src/assets/photo.png (1).webp'
 
 
-const Section = () => {
+const section = () => {
     return (
       <>
         <section className="section">
@@ -82,4 +82,4 @@ const Section = () => {
     );
 };
 
-export default Section;
+export default section;
