@@ -1,6 +1,6 @@
 .footer {
     height: 100vh;
-    width: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,4 +8,52 @@
     text-transform: uppercase;
     font-size: 36px;
     font-weight: 100;
+/*     background: linear-gradient(135deg, #f5f7fa 0%, #f8f9fa 100%); */
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://example.com/wedding-pattern.png') center/cover;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.footer h1 {
+    position: relative;
+    z-index: 1;
+    color: #333;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 28px;
+        height: 80vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        font-size: 22px;
+        height: 70vh;
+        padding: 0 15px;
+    }
+    
+    .footer h1 {
+        letter-spacing: 0.5px;
+    }
 }

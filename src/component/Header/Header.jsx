@@ -1,24 +1,53 @@
-import './Header.css'
-import logo from '/src/assets/test.webp'
-import inviteImg from '/src/assets/invitation.webp'
+import { motion } from "framer-motion";
+import "./Header.css";
+import logo from "/src/assets/test.webp";
+import inviteImg from "/src/assets/invitation.webp";
 
 const Header = () => {
-    return (
-      <header className="header">
-        <div className="header__logo">
-          <img src={logo} alt="logo" />
+  // Анимации для появления блоков
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
 
-          <div className="header__logo-text">
-            <h2>Рамшед ва Саида</h2>
-          </div>
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+  };
+
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.6 } },
+  };
+
+  return (
+    <header className="header">
+      <motion.div
+        className="header__logo"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={fadeInUp}
+      >
+        <img src={logo} alt="logo" />
+        <div className="header__logo-text">
+          <h2>Рамшед ва Саида</h2>
         </div>
-        <div className='inviteBaner'>
-        <div className='btnTop'></div>
-          <img src={inviteImg} alt="img" />
-          <div className='btnBtm'></div>
-        </div>
-      </header>
-    );
+      </motion.div>
+
+      <motion.div
+        className="inviteBaner"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={fadeInUp}
+      >
+        <motion.div className="btnTop" variants={fadeInLeft} />
+        <img src={inviteImg} alt="invitation" />
+        <motion.div className="btnBtm" variants={fadeInRight} />
+      </motion.div>
+    </header>
+  );
 };
 
 export default Header;
