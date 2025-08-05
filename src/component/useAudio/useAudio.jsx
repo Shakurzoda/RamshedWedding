@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import "./useAudio.css";
+import musicFile from "./Эндшпиль - 10.mp3";
 
 export default function MusicPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -9,9 +10,7 @@ export default function MusicPlayer() {
 
   // Инициализация аудио
   useEffect(() => {
-    audioRef.current = new Audio(
-      `${window.location.origin}/src/assets/Эндшпиль - 10.mp3`
-    );
+    audioRef.current = new Audio(musicFile);
     audioRef.current.loop = true;
     audioRef.current.volume = 0.5;
 
