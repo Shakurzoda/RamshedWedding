@@ -31,7 +31,7 @@ const Header = () => {
       >
         <img src={logo} alt="logo" />
         <div className="header__logo-text">
-          <h2>Рамшед ва Саида</h2>
+          <h2>Рамшед и Саида</h2>
         </div>
       </motion.div>
 

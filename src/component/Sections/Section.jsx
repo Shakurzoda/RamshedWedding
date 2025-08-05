@@ -51,7 +51,7 @@ const Section = () => {
         <motion.div className="section__text" variants={fadeInRight}>
           <motion.div className="blckTxt" variants={fadeInUp}>
             <p>
-              13 августа 2025 года <br /> состоится долгожданное событие
+              16 августа 2025 года <br /> состоится долгожданное событие
             </p>
           </motion.div>
 
@@ -98,8 +98,8 @@ const Section = () => {
         variants={fadeInUp}
       >
         <motion.div className="section__midl" variants={fadeInLeft}>
-          <p className="pingTxt">Ресторан "Яккасарой"</p>
-          <p className="blckTxt">г. Душанбе, пр. Шерози 22/2</p>
+          <p className="pingTxt">Ресторан "Интизори"</p>
+          <p className="blckTxt">г. Душанбе, ул. Зебуниссо, 5А</p>
         </motion.div>
       </motion.section>
 
@@ -124,7 +124,7 @@ const Section = () => {
             >
               <img src={licationIMG} alt="Сбор гостей" />
               <span className="section__TimeTableText">
-                <p>Сбор гостей</p>
+                <p>Сбор гостей <br /> 12:50</p>
               </span>
             </motion.div>
 
@@ -135,7 +135,7 @@ const Section = () => {
             >
               <img src={patyIMG} alt="Начало" />
               <span className="section__TimeTableText">
-                <p>Начало мероприятия</p>
+                <p>Начало мероприятия <br /> 13:00</p>
               </span>
             </motion.div>
 
@@ -146,7 +146,7 @@ const Section = () => {
             >
               <img src={cakeIMG} alt="Торт" />
               <span className="section__TimeTableText">
-                <p>Торт</p>
+                <p>Торт <br /> 15:30</p>
               </span>
             </motion.div>
           </motion.div>
